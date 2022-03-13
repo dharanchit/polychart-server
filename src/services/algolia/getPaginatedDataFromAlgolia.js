@@ -9,6 +9,7 @@ const searchIndex = client.initIndex(process.env.ALGOLIA_INDEX);
 
 const getPaginatedDataFromAlgolia = async (data) => {
   const { searchString, pageNo } = data;
+  // For empty string it will show all the results
   const response = await searchIndex.search(searchString, {
     page: pageNo - 1,
     hitsPerPage: 10,

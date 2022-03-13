@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.get("/", getDataController);
 router.patch("/", updateDataController);
-router.get("/policy-data", getPolicyDataController);
-router.get("/reports/monthly", getMonthlyReportsController);
+router.get("/policy-data", getPolicyDataController); //end point to auto populate data on modal
+router.get("/reports/monthly", getMonthlyReportsController); // endpoint to give the sum of the policies brought in a month
 
 module.exports = router;
